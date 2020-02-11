@@ -1,0 +1,23 @@
+print("Comprobando Disquetera")
+if fs.exists("/disk") then
+  print("descargando setup mas reciente")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/startup /disk/startup")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/es /disk/es")
+  shell.run("mkdir /disk/tempStore")
+  shell.run("mkdir /disk/tempStore/site")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempStore/site/dynamic /disk/tempStore/site/dynamic")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempStore/site/home /disk/tempStore/site/home")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempStore/site/store /disk/tempStore/site/store")
+  shell.run("mkdir /disk/tempMusic")
+  shell.run("mkdir /disk/tempMusic/site")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempMusic/site/dynamic /disk/tempMusic/site/dynamic")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempMusic/site/home /disk/tempMusic/site/home")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempMusic/site/music /disk/tempMusic/site/music")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempMusic/site/redstone /disk/tempMusic/site/redstone")
+  shell.run("mkdir /disk/tempBlank")
+  shell.run("mkdir /disk/tempBlack/site")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempBlank/site/dynamic /disk/tempBlack/site/dynamic")
+  shell.run("wget https://raw.githubusercontent.com/danilacasito/dynet/master/tempBlank/site/dynamic /disk/tempBlack/site/dynamic")
+else
+  error("Necesitas por lo menos tener un disquete insertado para que el programa funcione, si lo quieres localmente, crea la carpeta disk en la raiz")
+end
